@@ -1,12 +1,52 @@
-# React + Vite
+# 🎮 Tic-Tac-Toe with History & Winner Highlight
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React implementation of the classic **Tic-Tac-Toe** game with:
 
-Currently, two official plugins are available:
+✅ Move history (time travel)  
+✅ Auto-reset after win  
+✅ Highlighting the winning line  
+✅ X & O color-coded squares
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built to demonstrate core React concepts like `useState`, `useEffect`, component props, and immutability.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Live Demo
+
+👉 [Click to Play Online](https://your-demo-link.com) *(optional)*
+
+---
+
+## 🧠 Features
+
+- ✅ 2-player game (X vs O)
+- ⏮️ Move history navigation (time-travel)
+- 🔄 Auto-reset after a player wins
+- 🌈 Colored X and O squares
+- 🟩 Winner's line is highlighted
+- 💡 Clean, readable React components
+
+---
+
+## 📸 Screenshots
+
+| Playing             | Winner Highlight       |
+|---------------------|------------------------|
+| ![Gameplay](./screenshots/playing.png) | ![Winner](./screenshots/winner.png) |
+
+*(Create a `/screenshots` folder and add PNGs if needed)*
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Functional Components)
+- JavaScript (ES6+)
+- CSS (custom styles)
+
+---
+
+## 📦 Installation
+
+```bash
+git c
