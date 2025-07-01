@@ -8,7 +8,11 @@ export default function Game() {
 
   const currentSquares = history[currentMove];
   const xIsNext = currentMove % 2 === 0;
-  const winner = calculateWinner(currentSquares);
+  const result = calculateWinner(currentSquares);
+  const winner = result.winner;
+  const winningLine = result.line;
+  const isTie = !winner && currentSquares.every(Boolean);
+
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -20,16 +24,16 @@ export default function Game() {
     setCurrentMove(move);
   }
 
-  // Auto-reset on win
+  // Auto-reset on win or Tie
   useEffect(() => {
-    if (winner) {
+    if (winner || isTie) {
       const timeout = setTimeout(() => {
         setHistory([Array(9).fill(null)]);
         setCurrentMove(0);
-      }, 2000);
+      },5000);
       return () => clearTimeout(timeout);
     }
-  }, [winner]);
+  }, [winner, isTie]);
 
   const moves = history.map((_, move) => {
     const description = move ? `Go to move #${move}` : 'Go to game start';
@@ -43,8 +47,15 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-        {winner && <div className="game-over">Winner: {winner}. Resetting...</div>}
+        <Board 
+          xIsNext={xIsNext} 
+          squares={currentSquares} 
+          onPlay={handlePlay}
+          winningLine={winningLine}
+          isTie={isTie}
+         />
+       {winner && <div className="game-over">Winner: {winner}. Resetting...</div>}
+       {isTie && <div className="game-over">It’s a tie. Resetting...</div>}
       </div>
       <div className="game-info">
         <ol>{moves}</ol>

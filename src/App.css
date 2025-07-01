@@ -71,12 +71,17 @@ button {
 
 .square-x {
   color: #007bff; 
+  background-color: cyan;
 }
 
 .square-o {
   color: #dc3545; 
+  background-color: rgb(212, 212, 4);
 }
-
+.square-highlight {
+  background-color: #d1f7c4; /* light green highlight */
+  border: 3px solid #28a745;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; }
