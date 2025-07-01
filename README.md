@@ -34,7 +34,6 @@ Built to demonstrate core React concepts like `useState`, `useEffect`, component
 |---------------------|------------------------|
 | ![Gameplay](./screenshots/playing.png) | ![Winner](./screenshots/winner.png) |
 
-*(Create a `/screenshots` folder and add PNGs if needed)*
 
 ---
 
